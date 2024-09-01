@@ -1,0 +1,189 @@
+/* leaderboard.component.css */
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header {
+  background-color: #ff7043;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header-content mat-icon {
+  margin-right: 10px;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-text h2 {
+  margin: 10px 0 5px;
+}
+.user-info{
+  width: 100% !important;
+}
+.profile-text p {
+  margin: 0;
+  font-size: 18px;
+  color: #ff7043;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.leaderboard {
+  margin-top: 20px;
+}
+.left-content {
+  text-align: left;
+  min-width: 50px;
+}
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.leaderboard-text h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.leaderboard-text p {
+  margin: 0;
+  color: #888;
+}
+
+
+
+
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.bottom-nav mat-icon {
+  font-size: 28px;
+  color: #ff7043;
+}
+.buttons-group{
+margin-top: 21.875rem !important;
+}
+
+.top-header{
+  background-color: #1CCBDE;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5c38;
+  color: white;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  height: 60px;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer .home-button {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  width: 100px;
+}
+.footer .home-button img {
+
+  width: 100px;
+}
+.footer .home-button i {
+  bottom: 50%;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-40%);
+}
+
+  .top1 {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+.left-content {
+  margin-right: 20px; 
+}
+
+.right-section {
+display: flex;
+align-items: center;
+margin-left: auto; /* Push it to the right */
+}
+
+.right-section .points {
+margin-right: 20px; /* Adjust space between points and icons */
+font-weight: bold;
+}
+
+.right-section .dev {
+display: flex;
+align-items: center;
+}
+
+.right-section .dev i {
+margin-left: 10px; /* Space between icons */
+cursor: pointer;
+}
+
+
+

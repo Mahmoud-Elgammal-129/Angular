@@ -1,0 +1,111 @@
+.question-container {
+    padding: 10px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background-color: #1CCBDE;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .task-icon-container {
+    background-color: #ff5c38;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .task-icon {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .points-badge {
+    background-color: #ffcc00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .image-upload-container {
+    margin: 20px 0;
+    text-align: center;
+    border: 2px dashed #707070;
+    border-radius: 10px;
+    padding: 80px;
+    position: relative;
+  }
+  
+  #file-upload {
+    display: none;
+  }
+  
+  .custom-file-upload {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #707070;
+    font-size: 16px;
+  }
+  
+  .upload-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #707070;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #1CCBDE;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .button-group button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-group button img {
+    display: block;
+    /* text-align: center; */
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 218px;
+    height: 60px;
+}
+
+.button-group .button-text {
+  
+    position: absolute;
+    top: 55%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    color: white; /* Change this to whatever color you want the text to be */
+    font-size: 18px; /* Adjust the size as needed */
+    pointer-events: none; /* Ensure the text doesn't interfere with button clicks */
+}
+  

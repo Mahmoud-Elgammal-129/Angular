@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Existing styles are untouched */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.header {
+  background-color: #00a6ff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header i {
+  margin-right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.user-info {
+  background-color: #ff6347;
+  color: white;
+  padding: 30px; 
+ 
+  margin-bottom: 20px;
+  text-align: center;
+ 
+}
+
+.user-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-info h2 {
+  margin: 0;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.buttons-group{
+    border: 1px black dashed;
+}
+.buttons-group .btn1{
+    background-color: orange;
+    color: white;
+}
+.buttons-group .btn2, .btn3{
+    background-color: transparent;
+    color: black;
+}
+.w-10{
+    width: 10%;
+}
+.top1{
+    position: absolute;
+    top: -12px;
+    left: 15px;
+}
+.top2{
+    font-size: 17px;
+    font-weight: 400;
+}
+.borderimage img{
+  border: 3px solid white;
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin-right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 30px;
+  margin-left: 500px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notification-icon {
+  position: relative;
+}
+
+.notification-icon::after {
+  content: "5";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.settings-icon {
+  font-size: 20px;
+}
+.resize{
+  width: 50px;
+  height: 50px;
+}
+.shadow{
+  box-shadow:5px 10px gray ;
+}
+.textstyle{
+  color: #2ACEE0;
+}
+.user-info .left-section,
+.user-info .right-section {
+  display: flex;
+  align-items: center;
+}
+.user-info .right-section .profile-icon {
+  margin-right: 15px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+
+height: 70px;
+}
+.footer button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer .home-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+}
+.footer .home-button i {
+  bottom: 50%;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%);
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="fixed-top"  style="background-image: url('assets/img/background.png'); background-size: cover;background-repeat: no-repeat;">
+  
+      <div class="top-header d-flex align-items-center">
+        <div class="image">
+          <img src="assets/img/logo.png" alt="City Centre Almazza" class="img-fluid w-75">
+        </div>
+        <span class="text-white h6">City Center Almazza</span>
+      </div>
+  
+      <div class="user-info">
+        <div class="d-flex justify-content-between">
+          <div class="left-section">
+            <button class="back-button btn text-white d-flex align-items-center" (click)="navigateToRewards()">
+              <i class="fa-solid fa-angle-left"></i> Back 
+            </button>
+          </div>
+    
+          <div class="right-section">
+            <!-- Bind the user's score dynamically -->
+            <span class="points">{{ userScore }} pts</span>
+            <div class="dev d-flex justify-content-between w-25">
+              <i class="fas fs-3 fa-user-circle profile-icon" (click)="navigateToProfile()"></i>
+              <i class="fas fs-3 fa-bell" (click)="showNotifications()"></i>
+            </div>
+          </div>
+        </div>
+    
+        <div class="borderimage py-3">
+          <!-- Dynamically bind the user's profile image -->
+          <img [src]="getProfileImagePath('assets/img/man.jpg')" alt="User Profile Picture">
+        </div>
+     
+        <!-- Bind the user's name dynamically -->
+        <h2>{{ leaderboard[0]?.BX_User_Name || 'Ahmad Kolakji' }}</h2>
+        <span class="points textstyle">{{ userScore }} pts</span>
+      </div>
+    </div>
+  
+    <div class="buttons-group text-center d-flex justify-content-between">
+      <button class="btn btn1 fs-3 fw-bold text-muted">Game 1</button>
+      <button class="btn btn2 fs-3 fw-bold text-muted">Game 2</button>
+      <button class="btn btn3 fs-3 fw-bold text-muted">Game 3</button>
+    </div>
+  
+<!-- 
+<div *ngFor="let player of leaderboard; let i = index" class="leaderboard-item shadow-sm rounded-3 bg-light my-3 p-2">
+  <div class="d-flex align-items-center">
+  
+    <div class="rank me-3 text-muted">
+      <h5 class="mb-0">{{ i + 1 }}<span class="top1">{{ getOrdinalSuffix(i + 1) }}</span></h5>
+    </div>
+    
+   
+    <div class="d-flex align-items-center flex-grow-1">
+      <div class="image me-3">
+        <img [src]="player.BX_User_Pic_Path || 'assets/img/man.jpg'" class="rounded-circle resize" alt="{{ player.BX_User_Name }}">
+      </div>
+      <p class="mb-0 fw-semibold">{{ player.BX_User_Name }}</p>
+    </div>
+
+   
+    <div class="points text-primary fw-bold">
+      <h5 class="mb-0">{{ player.UserScore }}<sup class="top2">pts</sup></h5>
+    </div>
+  </div>
+</div> -->
+
+
+    <div *ngFor="let player of leaderboard; let i = index" class="items my-4 text-center shadow text-center bg-light rounded-3 ">
+      <div class="item d-flex  align-items-center m-auto py-2  text-center">
+        <div class="left-content me-3 " style="text-align: left;">
+          <h5 class="position-relative text-muted fw-bold" style="text-align: left;">{{ i + 1 }} <span class="top1 px-3">{{ getOrdinalSuffix(i + 1) }}</span></h5>
+        </div>
+        
+        <!-- <div class="image">
+          
+          <img [src]="player.BX_User_Pic_Path || 'assets/img/man.jpg'" class="rounded-circle resize" alt="{{ player.BX_User_Name }}">
+        </div>
+        <div>
+          <p class="m-0">{{ player.BX_User_Name }}</p>
+        </div> -->
+        <div class="d-flex align-items-center flex-grow-1 px-3">
+          <div class="image me-3">
+            <img [src]="player.BX_User_Pic_Path || 'assets/img/man.jpg'" class="rounded-circle resize" alt="{{ player.BX_User_Name }}">
+          </div>
+          <p class="mb-0 fw-semibold">{{ player.BX_User_Name }}</p>
+        </div>
+       <div>
+        <h5 class="position-relative right-content textstyle fw-bold">{{ player.UserScore }}<sup class="top2">pts</sup></h5>
+
+       </div>
+        
+      </div>
+    </div> 
+  
+    <p class="powered-by text-center">Powered by Be Game</p>
+  <!-- Footer -->
+  <app-footer 
+    (homeNavigate)="navigateToHome()"
+    (rankingNavigate)="navigateToRanking()"
+    (activityTitleNavigate)="navigateToActivityTitle()"
+    (rewardsNavigate)="navigateToRewards()"
+    (signinNavigate)="navigateToSignin()">
+  </app-footer>
+  </div>
+  
+  <app-notifications 
+    [visible]="notificationVisible" 
+    (closeEvent)="onCloseNotification()">
+  </app-notifications>
+  
+
+</body>
+</html>

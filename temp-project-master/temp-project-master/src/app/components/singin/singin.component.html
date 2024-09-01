@@ -1,0 +1,61 @@
+<!-- 
+<div class="login-container singin-background">
+  <div class="login-box" >
+    <img src="assets/img/logo.png" alt="City Centre Almazza" class="logo">
+    <h2>Sign in</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="mobile">Mobile number</label>
+        <input type="text" id="mobile" [(ngModel)]="mobileNumber" name="mobile" placeholder="Please enter your mobile number here" required>
+      </div>
+      <div class="form-group">
+        <label for="password">User Name</label>
+        <input type="text" id="password" [(ngModel)]="password" name="password" placeholder="Please enter your User Name here" required>
+      </div>
+      <div class="button-group">
+        <button type="submit">
+            <img src="assets/img/button.png" alt="Start the game" />
+            <span class="button-text m-auto">Start the Game</span>
+        </button>
+      </div>
+ 
+    </form>
+
+    
+    <footer>
+      <p>Powered by <strong>Be Game</strong></p>
+    </footer>
+  </div>
+</div> -->
+<div class="login-container singin-background">
+  <div class="login-box">
+    <img src="assets/img/logo.png" alt="City Centre Almazza" class="logo">
+    <h2>Sign in</h2>
+    <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="mobile" class="m">Mobile number</label>
+        <input type="text" id="mobile" formControlName="mobileNumber" placeholder="Please enter your mobile number here">
+        <div *ngIf="signinForm.controls['mobileNumber'].invalid && (signinForm.controls['mobileNumber'].dirty || signinForm.controls['mobileNumber'].touched)">
+          <div *ngIf="signinForm.controls['mobileNumber'].errors?.['required']">Mobile number is required.</div>
+          <div *ngIf="signinForm.controls['mobileNumber'].errors?.['pattern']">Mobile number must start with 010, 011, 012, or 015 and be 11 digits long.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username" class="U">User Name</label>
+        <input type="text" id="username" formControlName="username" placeholder="Please enter your User Name here">
+        <div *ngIf="signinForm.controls['username'].invalid && (signinForm.controls['username'].dirty || signinForm.controls['username'].touched)">
+          <div *ngIf="signinForm.controls['username'].errors?.['required']">User Name is required.</div>
+        </div>
+      </div>
+      <div class="button-group">
+        <button type="submit" [disabled]="signinForm.invalid">
+          <img src="assets/img/button.png" alt="Start the game">
+          <span class="button-text m-auto">Start the Game</span>
+        </button>
+      </div>
+    </form>
+    <footer>
+      <p>Powered by <strong>Be Game</strong></p>
+    </footer>
+  </div>
+</div>

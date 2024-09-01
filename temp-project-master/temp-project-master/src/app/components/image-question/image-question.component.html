@@ -1,0 +1,28 @@
+<div class="question-container">
+    <div class="card">
+      <div class="card-header">
+
+        <div class="task-text">
+       
+          <p>{{ task.BX_Questions_Text_EN || task.BX_Questions_Text_AR }}</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="image-upload-container">
+          <label for="file-upload" class="custom-file-upload">
+            <i class="fas fa-plus-circle upload-icon"></i>
+            <p>Take a photo of the Lupin picture beside the ferris wheel and send it</p>
+          </label>
+          <input type="file" (change)="handleFileInput($event)" id="file-upload" />
+        </div>
+        <div class="button-group">
+            <button type="submit"  (click)="submitImage()" >
+              <img src="assets/img/button.png" alt="Start the game">
+              <span class="button-text m-auto">Done</span>
+            </button>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  

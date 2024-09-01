@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+} */
+.top-header{
+  background-color: #1CCBDE;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5c38;
+  color: white;
+  padding: 10px;
+}
+
+.header .left-section,
+.header .right-section {
+  display: flex;
+  align-items: center;
+}
+.header .right-section .profile-icon {
+  margin-right: 15px; /* Adjust the value as needed */
+}
+.header .center-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .logo {
+  max-width: 30px;
+  margin-right: 10px;
+}
+
+.header .back-button,
+.header .points {
+  margin-right: 10px;
+}
+
+.containers {
+  padding: 20px;
+  max-width: 414px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+} 
+
+.profile-img-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block; 
+  border: 3px solid white;
+ 
+}
+.icon {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  font-size: 1.5rem; /* Adjust as needed */
+  color: white; /* Adjust as needed */
+  background-color: #00B2E2; /* Optional: add a background for better visibility */
+  border-radius: 50%;
+  padding: 5px; /* Optional: add padding for a better look */
+}
+.borderimage img{
+  border: 3px solid white;
+
+}
+.hidden {
+  display: none;
+}
+.upload-btn {
+ 
+  bottom: 0;
+  right: 0;
+  background-color: #00B2E2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.form-group input{
+  outline: none !important;
+  border: none !important;
+  border-bottom:1px solid black!important;
+
+  
+}
+.change{
+  color:white;
+  background-color: black;
+  border-radius: 20px;
+  width: 25%;
+  height: 50%;
+
+  margin-top: auto;
+  
+}
+.form-group .gender {
+  display: flex;
+ 
+}
+
+.form-group .gender input[type="radio"] {
+  display: none;
+}
+
+.form-group .gender label {
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-group .gender input[type="radio"]:checked + label {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* .form-group button {
+  width: 100%;
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+/* .form-group button:hover {
+  background-color: #E64A19;
+} */
+
+.hidden {
+  display: none;
+}
+
+
+
+
+.card-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px; /* Adjust as needed */
+  margin: 0 auto; /* Center the card */
+}
+
+.card-form .form-group {
+  margin-bottom: 15px;
+}
+
+.card-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-form input[type="text"],
+.card-form input[type="email"],
+.card-form input[type="password"],
+.card-form input[type="date"],
+.card-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.card-form .gender {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-form .gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+.card-form .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-form .change {
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}

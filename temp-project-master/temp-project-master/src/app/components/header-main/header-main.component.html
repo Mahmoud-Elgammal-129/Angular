@@ -1,0 +1,15 @@
+<header class="header">
+    <div class="left-section">        
+      <button class="back-button btn text-white" (click)="navigateToMission()">
+        <i class="fa-solid fa-angle-left"></i> Back 
+      </button> 
+    </div>
+    <div class="right-section">
+      <span class="points">{{ points }} pts</span>
+      <div class="dev d-flex justify-content-between w-25">
+        <i class="fas fs-3 fa-user-circle profile-icon" (click)="navigateToProfile()"></i>
+        <i class="fas fs-3 fa-bell" (click)="showNotifications1()"></i>
+      </div>
+    </div>
+  </header>
+  

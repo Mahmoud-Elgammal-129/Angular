@@ -1,0 +1,57 @@
+<div class="overlay" *ngIf="visible" (click)="close()"></div>
+<div class="container" [class.visible]="visible">
+  <div class="notifications">
+    <div class="header">
+      <h1>Notifications</h1>
+      <button class="close-btn" (click)="close()">✕</button>
+    </div> 
+
+     <!-- <div class="header">
+      <h2>Notifications</h2>
+       <button class="close-btn" (click)="close()">
+        <span class="fa-stack fa-2x">
+        <i class="fas fs-2 fa-times-circle  circle-background"></i>
+        <i class="fas fa-times fa-stack-1x x-icon"></i>
+        </span>
+      </button>  
+     
+    </div> -->
+    <div class="new">
+      <h2>New</h2>
+      <div class="notification" *ngFor="let notification of newNotifications">
+        <p>{{ notification.message }}</p>
+        <span class="time">{{ notification.time }}</span>
+      </div>
+    </div>
+    <div class="earlier">
+      <h2>Earlier</h2>
+      <div class="notification" *ngFor="let notification of earlierNotifications">
+        <p>{{ notification.message }}</p>
+        <span class="time">{{ notification.time }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <div class="notifications">
+    <div class="notifications-header">
+      <h2>Notifications</h2>
+       <button class="close-button" (click)="close()">
+        <span class="fa-stack fa-2x">
+        <i class="fas fs-2 fa-times-circle  circle-background"></i>
+        <i class="fas fa-times fa-stack-1x x-icon"></i>
+        </span>
+      </button> 
+     
+    </div>
+
+    <div class="notifications-list">
+      <div class="notification" *ngFor="let notification of notifications">
+        <p>{{ notification.message }}</p>
+        <span>{{ notification.timeAgo }}</span>
+      </div>
+
+      
+    </div>
+
+  </div> -->

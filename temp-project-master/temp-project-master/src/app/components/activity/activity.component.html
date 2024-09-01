@@ -1,0 +1,17 @@
+<!-- activity.component.html -->
+<div class="container" style="background-image: url('assets/img/background.png'); background-size: cover; background-repeat: no-repeat;">
+  <div class="header">
+    <img src="assets/img/logo.png" alt="City Centre Almazza" class="logo">
+  </div>
+  <h1>Choose an Activity</h1>
+  <p>{{ brandDescription }}</p>
+  <div class="activity-grid">
+    <a *ngFor="let campaign of campaigns" (click)="activityTitle(campaign.BX_Camp_ID_PK)">
+      <div class="activity-card">
+        <img [src]="campaign.BX_Camp_Logo_EN" [alt]="campaign.BX_Camp_Name_EN">
+        <p>{{ campaign.BX_Camp_Name_EN }}</p>
+      </div>
+    </a>
+    <!-- Existing static activity cards can remain here if needed -->
+  </div>
+</div>

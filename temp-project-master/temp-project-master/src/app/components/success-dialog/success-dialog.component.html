@@ -1,0 +1,18 @@
+<!-- success-dialog.component.html -->
+<div class="custom-dialog" *ngIf="isDialogVisible" [class.visible]="visible">
+    <div class="dialog-overlay" (click)="closeDialog()"></div>
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <button class="close-button" (click)="closeDialog()">×</button>
+      </div>
+      <div class="dialog-body">
+        <!-- <img src="assets/images/success-icon.png" alt="Success" class="icon"> -->
+        <p class="title">Correct</p>
+        <p>You Gained <span class="points">15 points</span></p>
+      </div>
+      <div class="dialog-footer">
+        <button class="dialog-button" (click)="continueGame()">Continue Game</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,28 @@
+
+<div class="mission-container" style="background-image: url('assets/img/background.png'); background-size: cover;background-repeat: no-repeat;">
+  <div>
+    <div>
+      <!-- Logo Header -->
+  <app-header-logo></app-header-logo>
+
+  <!-- Main Header -->
+  <app-header-main 
+    [points]="points"
+    (missionNavigate)="navigateToActivityTitle()"
+    (profileNavigate)="navigateToProfile()"
+    (showNotifications)="showNotifications()">
+  </app-header-main>
+      <h2>Choose a Track and Play its Tasks</h2>
+    <div *ngIf="missions.length > 0" class="track-list">
+      <div class="track-item" *ngFor="let mission of missions" (click)="storeMissionId(mission.BX_Mission_ID_PK)">
+        <div class="header-content">
+          <h3 [innerHTML]="mission.BX_Mission_Name_EN"></h3>
+          <p [innerHTML]="mission.BX_Mission_Locaion_Text_EN"></p>
+        </div>
+        <i class="fa-solid fs-4 fa-angle-right icon"></i>
+      </div>
+        <p class="powered-by text-center m-3">Powered by Be Game</p>
+      </div>
+    </div>
+  </div>
+</div>

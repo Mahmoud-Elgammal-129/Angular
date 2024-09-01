@@ -1,0 +1,144 @@
+<div class="col-12">
+  <!-- Logo Header -->
+  <app-header-logo></app-header-logo>
+
+  <!-- Main Header -->
+  <app-header-main 
+   
+    (missionNavigate)="navigateToHome()"
+    (profileNavigate)="navigateToProfile()"
+    (showNotifications)="showNotifications()">
+  </app-header-main>
+
+<div class="containers" style="background-image: url('assets/img/background.png'); background-size: cover;background-repeat: no-repeat; ">
+  <div class="profile-img-container">
+      <!-- <img id="profile-img" [src]="profileImgSrc"  class="profile-img">  -->
+      <!-- <i class="fa-solid fs-5 fa-camera profile-img" (change)="onImageUpload($event)" ></i> -->
+ <input type="file" id="profile-upload" class="hidden"  accept="image/*">  
+    <label for="profile-upload" class="upload-btn mt-5 ">
+      
+      <img src="assets/img/man.jpg" class="rounded-circle mx-auto d-flex mt-5 profile-img" width="150" height="150"  alt="Upload">
+      <i class="fa-solid fa-camera icon" (click)="onImageUpload($event)"></i>
+    </label>
+  </div>
+  <form class="pt-5 card-form">
+    <div class="form-group">
+      <label for="nick-name">Nick name</label>
+      <input type="text" id="nick-name" placeholder="Rokxi Example Foxi">
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="player@example.com">
+    </div>
+  
+    <div class="d-flex justify-content-between">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="********">
+      </div>
+      <button class="change">Change</button>
+    </div>
+  
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="birthdate">Birthdate</label>
+      <input type="date" id="birthdate" placeholder="DD/MM/YYYY">
+    </div>
+  
+    <div class="form-group">
+      <label for="city">City</label>
+      <select id="city">
+        <option value="">Choose your city from the list</option>
+        <option value="city1">City 1</option>
+        <option value="city2">City 2</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="interests">Interests</label>
+      <select id="interests">
+        <option value="">Choose your interests from the list</option>
+        <option value="interest1">Interest 1</option>
+        <option value="interest2">Interest 2</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit">Start the game</button>
+    </div>
+  </form>
+  
+ 
+  <!-- <form class="pt-5">
+    <div class="form-group">
+      <label for="nick-name">Nick name</label>
+      <input type="text" id="nick-name" placeholder="Rokxi Example Foxi">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="player@example.com">
+    </div>
+  <div class="d-flex justify-content-between">
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="********">
+    
+  </div>
+  <button class="change">change</button>
+  </div>  
+   
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="birthdate">Birthdate</label>
+      <input type="date" id="birthdate" placeholder="DD/MM/YYYY">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <select id="city">
+        <option value="">Choose your city from the list</option>
+        <option value="city1">City 1</option>
+        <option value="city2">City 2</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="interests">Interests</label>
+      <select id="interests">
+        <option value="">Choose your interests from the list</option>
+        <option value="interest1">Interest 1</option>
+        <option value="interest2">Interest 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <button type="submit">Start the game</button>
+    </div>
+  </form> -->
+  <p class="powered-by">Powered by Be Game</p>
+</div>
+
+
+<app-notifications 
+  [visible]="notificationVisible" 
+  (closeEvent)="onCloseNotification()">
+</app-notifications>

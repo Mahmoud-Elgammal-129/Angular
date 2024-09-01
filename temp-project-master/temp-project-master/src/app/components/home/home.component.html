@@ -1,0 +1,70 @@
+<div class="container"  style="background-image: url('assets/img/background.png'); background-size: cover;background-repeat: no-repeat;">
+  <!-- Logo Header -->
+  <app-header-logo></app-header-logo>
+
+  <!-- Main Header -->
+  <app-header-main 
+    [points]="points"
+    (missionNavigate)="navigateToMission()"
+    (profileNavigate)="navigateToProfile()"
+    (showNotifications)="showNotifications()">
+  </app-header-main>
+
+  <!-- Task List Content -->
+  <div class="task-list">
+    <p class="fw-bold text-muted ms-4">Complete the tasks, gain points and get rewards</p>
+    <div class="task-item" *ngFor="let task of tasks; trackBy: trackByTaskId" (click)="selectTask(task)">
+      <div class="task-card card">
+        <div class="card-header d-flex align-items-center px-4 py-3 w-2 justify-content-center align-items-center m-auto">
+          <div class="task-icon-container">
+            <img src="assets/img/think.png" class="image" alt="Done" *ngIf="task.BX_Questions_Title_EN === 'Think and answer'" />
+            <i *ngIf="task.BX_Questions_Type_ID_FK === 11 
+            ||task.BX_Questions_Type_ID_FK === 12 ||
+            task.BX_Questions_Type_ID_FK === 13
+            ||task.BX_Questions_Type_ID_FK === 14" class="fas fa-comment-dots icon"></i>
+            <i *ngIf="task.BX_Questions_Type_ID_FK === 20" class="fas fa-qrcode task-icon"></i>
+            <i *ngIf="task.BX_Questions_Type_ID_FK === 15 
+            ||task.BX_Questions_Type_ID_FK === 16 ||
+            task.BX_Questions_Type_ID_FK === 17
+            ||task.BX_Questions_Type_ID_FK === 18" class="fas fa-camera task-icon"></i>
+            <i *ngIf="![8,9,10,11,12,13,14,15,16,17,18 ].includes(task.BX_Questions_Type_ID_FK)" class="fas fa-question-circle task-icon"></i>
+          </div>
+
+          <div class="task-text">
+            <p class="fw-bold" [innerHTML]="task.BX_Questions_Title_EN"></p>
+            <p *ngIf="task.BX_Questions_Text_EN">
+              {{ task.BX_Questions_Text_EN.length > 50 ? (task.BX_Questions_Text_EN | slice:0:50) + '...' : task.BX_Questions_Text_EN }}
+            </p>
+            <p *ngIf="!task.BX_Questions_Text_EN">
+              
+              No description available.
+            </p>
+          </div>
+          
+          
+          
+          <span class="points-badge">{{ task.BX_Questions_Correct_Point }} pts</span>
+        </div>
+        <div *ngIf="selectedTask === task">
+          <div class="task-detail">
+            <ng-container *ngComponentOutlet="getComponentForQuestionType(task.BX_Questions_Type_ID_FK); injector: createInjector(task)">
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="powered-by text-center m-3">Powered by Be Game</p>
+
+  <!-- Footer -->
+  <app-footer 
+    (homeNavigate)="navigateToHome()"
+    (rankingNavigate)="navigateToRanking()"
+    (activityTitleNavigate)="navigateToActivityTitle()"
+    (rewardsNavigate)="navigateToRewards()"
+    (signinNavigate)="navigateToSignin()">
+  </app-footer>
+
+  <app-notifications [visible]="notificationVisible" (closeEvent)="onCloseNotification()"></app-notifications>
+</div>

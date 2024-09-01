@@ -1,0 +1,62 @@
+
+<div >
+  <!-- Logo Header -->
+  <app-header-logo></app-header-logo>
+
+  <!-- Main Header -->
+  <app-header-main 
+   
+    (missionNavigate)="navigateToHome()"
+    (profileNavigate)="navigateToProfile()"
+    (showNotifications)="showNotifications()">
+  </app-header-main>
+    <div class="rewards " style="background-image: url('assets/img/background.png'); background-size: cover;background-repeat: no-repeat; ">
+      <h2>Rewards</h2>
+      <p>Collect Points to Redeem Rewards</p>
+      <div class="reward-card  ">
+        <div class="image">
+          <img src="assets/img/eat1.png" alt="McDonalds Reward">
+        </div>
+        <div class="details  ">
+          <span class="title">Reward Title</span>
+          <span class="description ">Text description of reward and conditions for redemption</span>
+          <span class="value">Value or discount or final price... etc</span>
+        </div>
+        <span class="pointes">690 pts</span>
+      </div>
+      <div class="reward-card">
+        <div class="image">
+          <img src="assets/img/van2.png" alt="Fast and Furious Reward">
+        </div>
+        <div class="details">
+          <span class="title">Reward Title</span>
+          <span class="description">Text description of reward and conditions for redemption</span>
+          <span class="value">Value or discount or final price... etc</span>
+        </div>
+        <span class="pointes">690 pts</span>
+      </div>
+      <div class="reward-card">
+        <div class="image">
+          <img src="assets/img/eat2.png" alt="KFC Reward">
+        </div>
+        <div class="details">
+          <span class="title">Reward Title</span>
+          <span class="description">Text description of reward and conditions for redemption</span>
+          <span class="value">Value or discount or final price... etc</span>
+        </div>
+        <span class="pointes">690 pts</span>
+      </div>
+  <!-- Footer -->
+  <app-footer 
+    (homeNavigate)="navigateToHome()"
+    (rankingNavigate)="navigateToRanking()"
+    (activityTitleNavigate)="navigateToActivityTitle()"
+    (rewardsNavigate)="navigateToRewards()"
+    (signinNavigate)="navigateToSignin()">
+  </app-footer>
+    </div>
+  </div>
+  <app-notifications 
+  [visible]="notificationVisible" 
+  (closeEvent)="onCloseNotification()">
+</app-notifications>

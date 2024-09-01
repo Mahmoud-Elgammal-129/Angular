@@ -1,0 +1,358 @@
+.rewards-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  .top-header{
+    background-color: #1CCBDE;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff5c38;
+    color: white;
+    padding: 10px;
+  }
+  
+  .header .left-section,
+  .header .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .center-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .header .logo {
+    max-width: 30px;
+    margin-right: 10px;
+  }
+  
+  .header .back-button,
+  .header .points {
+    margin-right: 10px;
+  }
+  
+  
+  .points {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* .points span {
+    margin-right: 10px;
+  } */
+  
+  .rewards-list {
+    padding: 10px;
+  }
+  
+  .reward-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .reward-card img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .reward-details h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .reward-details p {
+    margin: 5px 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #00a8e8;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #ff6600;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .header .right-section .profile-icon {
+    margin-right: 15px; 
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .header .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .actions button {
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .header .actions button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .header .actions .points {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .header .actions .notification {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .rewards {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .rewards h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rewards p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .reward-card {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16+px;
+    background-color:white ;
+    
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+
+  
+
+  .reward-card .image {
+
+    top: 0; 
+    left: 50%; 
+    transform: translate(-50%,50%); 
+    /* width: 200px; 
+    height: 200px; */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .reward-card .image img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 10%; 
+    border: 5px solid #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    object-fit: cover;
+    margin: auto;
+  
+  }
+
+  .reward-card .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  
+  .reward-card .details .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .reward-card .details .description {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .reward-card .details .value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1CCBDE;
+    
+  }
+
+  .reward-card .pointes {
+    position: absolute; 
+    background-color: #1CCBDE;
+    color: white;
+    padding: 3px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+    top: 0;
+  
+  
+  }
+
+ 
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .footer .home-button {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+  }
+    .footer .home-button i {
+     bottom: 50%;
+     left: 50%;
+     top: 40%;
+     transform: translateX(-40%);
+     
+    }
+  .handle1{
+    top: 188px;
+    left: 10px;
+    width: 40px;
+    height: 80px;
+   
+    background: var(--unnamed-color-ff5b36) 0% 0% no-repeat padding-box;
+    background: #FF5B36 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  /* General styles */
+
+
+.col-12 {
+  padding: 20px;
+}
+
+
+
+.reward-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.reward-card .image {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+
+
+.reward-card .details {
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+  
+

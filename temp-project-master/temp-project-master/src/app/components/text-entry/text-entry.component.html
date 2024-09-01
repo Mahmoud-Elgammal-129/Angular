@@ -1,0 +1,20 @@
+<div class="question-card">
+    <div class="card-header">
+
+      <div class="task-info">
+        
+        <p class="question-text">{{ task.BX_Questions_Text_EN || task.BX_Questions_Text_AR }}</p>
+      </div>
+
+    </div>
+    <div class="card-body">
+      <textarea class="text-input" [(ngModel)]="enteredText" placeholder="Enter your text here..."></textarea>
+      <div class="button-group">
+        <button type="submit"  (click)="submitText()" >
+          <img src="assets/img/button.png" alt="Start the game">
+          <span class="button-text m-auto">Done</span>
+        </button>
+      </div> 
+       </div>
+  </div>
+  

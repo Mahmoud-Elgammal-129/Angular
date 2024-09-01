@@ -1,0 +1,85 @@
+/* .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  height: 60px;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer .home-button {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  width: 100px;
+}
+
+.footer .home-button i {
+  bottom: 50%;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-40%);
+  -webkit-transform: translateX(-40%);
+  -moz-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  -o-transform: translateX(-40%);
+}
+
+
+.active {
+  background-color: hsl(34, 100%, 50%); 
+  color: white; 
+} */
+.footer {
+  display: flex;
+  justify-content: space-around; /* Space all buttons evenly */
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black; /* Default color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  display: flex; /* Align icon center */
+  align-items: center; /* Align icon center vertically */
+  justify-content: center; /* Align icon center horizontally */
+  padding: 10px; /* Add padding for better clickability */
+}
+
+.footer button.selected {
+  color: #00aaff; /* Highlight color for selected button */
+}
+
+.footer .home-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; /* Default color */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  background-color: transparent; /* Ensure no background color unless selected */
+  border-radius: 50%; /* Make it circular if desired */
+  padding: 0; /* Reset padding */
+}
+
+.footer .home-button.selected {
+  color: #00aaff; /* Highlight color for selected button */
+  background-color: white; /* Background color when selected */
+  border: 1px solid #00aaff; /* Optional border for visibility */
+}

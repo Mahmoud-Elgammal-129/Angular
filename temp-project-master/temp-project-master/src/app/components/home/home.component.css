@@ -1,0 +1,267 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  /* box-sizing: border-box; */
+}
+
+.top-header {
+  background-color: #1CCBDE;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5c38;
+  color: white;
+  padding: 10px;
+}
+
+.header .left-section,
+.header .right-section {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header .center-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .back-button,
+.header .points {
+  margin-right: 10px;
+}
+
+.header .center-section .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.task-list {
+  margin-top: 8.125rem;
+}
+
+.task-item {
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: white;
+  border: none;
+  position: relative;
+}
+
+.icon {
+  font-size: 24px;
+  color: white;
+  background-color: #ff6600;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-body p {
+  color: #777;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer .home-button {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.footer .home-button i {
+  bottom: 50%;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-40%);
+}
+
+.powered-by {
+  font-size: 12px;
+  color: #777;
+}
+
+.points {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.points-badge {
+  background-color: #1CCBDE;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 3px 30px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.task-card {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.task-detail .card-body {
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+}
+
+.task-detail .card-body p {
+  margin: 10px 0;
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option input[type="radio"] + label {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option input[type="radio"]:checked + label {
+  background-color: #ff5c38;
+  border-color: #ff5c38;
+  color: white;
+}
+
+.button-group button {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button-group button img {
+  display: block;
+  width: 200px;
+  height: 60px;
+}
+
+.button-group .button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.my-popup {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.my-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.my-content {
+  font-size: 18px;
+  color: #666;
+}
+
+.my-confirm-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.task-icon-container {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+}
+
+.task-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.task-icon-container {
+  margin-top: -50px;
+  margin-left: -25px;
+  background-color: #ff5c38;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+}
+
+.task-text {
+  padding-left: 20px;
+  color: #707070;
+}

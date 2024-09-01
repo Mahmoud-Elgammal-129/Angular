@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff5c38;
+    color: white;
+    padding: 10px;
+  }
+  .header .left-section,
+  .header .right-section {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .header .back-button,
+  .header .points {
+    margin-right: 10px;
+  }
+  

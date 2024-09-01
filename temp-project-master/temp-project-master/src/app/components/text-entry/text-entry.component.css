@@ -1,0 +1,125 @@
+.question-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .icon-container {
+    background-color: #ff6b6b;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .task-info {
+    flex-grow: 1;
+  }
+  
+  .question-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .question-text {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .points-badge {
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .card-body {
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .text-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+  }
+  
+  .text-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  .button-group button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-group button img {
+    display: block;
+    /* text-align: center; */
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 218px;
+    height: 60px;
+}
+
+.button-group .button-text {
+  
+    position: absolute;
+    top: 55%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    color: white; /* Change this to whatever color you want the text to be */
+    font-size: 18px; /* Adjust the size as needed */
+    pointer-events: none; /* Ensure the text doesn't interfere with button clicks */
+}
+  

@@ -1,0 +1,265 @@
+/* .mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('../../../assets/img/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top-header {
+  background-color: #1CCBDE;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.top-header .btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.top-header .points {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.dev i {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.track-list {
+  width: 100%;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #67beeb;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.header-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 24px;
+}
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+} */
+
+
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.top-header{
+  background-color: #1CCBDE;
+}
+.header .right-section .profile-icon {
+  margin-right: 15px; /* Adjust the value as needed */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5c38;
+  color: white;
+  padding: 10px;
+}
+
+.header .left-section,
+.header .right-section {
+  display: flex;
+  align-items: center;
+}
+
+.header .center-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .logo {
+  max-width: 30px;
+  margin-right: 10px;
+}
+
+.header .back-button,
+.header .points {
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 20px;
+}
+.user-icon,
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+h2 {
+  margin-top: 150px;
+  font-size: 24px;
+}
+
+.track-list {
+  margin-top: 15px;
+}
+
+
+
+.track-item h3 {
+  margin: 0;
+}
+
+.track-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+
+
+.track-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #67beeb;
+  padding: 10px;
+  color: white;
+}
+
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h3, .header-content p {
+  margin: 0;
+}
+
+.header-content h3 {
+  font-size: 20px;
+  font: normal normal normal 18px/24px Segoe UI;
+}
+
+.header-content p {
+  font-size: 14px;
+  font: normal normal normal 18px/24px Segoe UI;
+}
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+
+
+ 
+  
+}
+
+.back-button .icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  right: 20px; /* Adjust as needed */
+  bottom: 20px; /* Adjust as needed */
+  margin-left: 30px;
+ 
+  
+
+  
+  
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2px;  */
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

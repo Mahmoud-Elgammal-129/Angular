@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.singin-background{
+    background-image: url('assets/img/background.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+}
+.points{
+    background-color: white;
+    padding: 3px 14px;
+    border-radius: 25px;
+    color: #FFAF3B;
+    margin-top: auto;
+    
+
+}
+.point{
+    background-color:#1CCBDE;
+    padding: 3px 30px;
+    /* border-radius: 25px; */
+    border-bottom-left-radius:15px ;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white; 
+    position: absolute ; 
+    right: 0;
+    top: 0;
+}
+/* .pointes{
+    background-color:#1CCBDE;
+    padding: 3px 30px;
+  
+    border-bottom-left-radius:15px ;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white; 
+    position: absolute ; 
+    right: 0;
+    top: 0;  
+} */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

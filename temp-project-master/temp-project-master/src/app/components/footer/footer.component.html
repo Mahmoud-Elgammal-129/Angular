@@ -1,0 +1,35 @@
+<footer class="footer fixed-bottom">
+  <button 
+    [ngClass]="{'selected': selectedButton === 'home'}" 
+    (click)="navigateToHome()">
+    <i class="fas fa-list"></i>
+  </button>
+  
+  <button 
+    [ngClass]="{'selected': selectedButton === 'ranking'}" 
+    (click)="navigateToRanking()">
+    <i class="fas fa-chart-bar"></i>
+  </button>
+  
+  <button 
+    class="home-button position-relative" 
+    [ngClass]="{'selected': selectedButton === 'activity'}" 
+    (click)="navigateToActivityTitle()">
+    <img src="assets/img/Path 8.svg" alt="" class="btn">
+
+      <i class="fas fa-home position-absolute"></i>
+    
+  </button>
+  
+  <button 
+    [ngClass]="{'selected': selectedButton === 'rewards'}" 
+    (click)="navigateToRewards()">
+    <i class="fas fa-trophy"></i>
+  </button>
+  
+  <button 
+    [ngClass]="{'selected': selectedButton === 'signin'}" 
+    (click)="navigateToSignin()">
+    <i class="fas fa-sync-alt"></i>
+  </button>
+</footer>

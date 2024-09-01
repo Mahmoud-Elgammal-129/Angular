@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+   .login-box {
+background-color: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+   
+    max-width: 400px;
+    width: 100%;
+  }
+  
+   .logo {
+    width: 100px;
+    margin-bottom: 1rem;
+  } 
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    /* border-top-left-radius: 10px; 
+    border-bottom-left-radius: 30px; 
+    border-top-right-radius: 20px; 
+    border-bottom-right-radius: 20px;  */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    opacity: 1;
+  
+  }
+  
+  /* button:hover {
+    background: #e64a19;
+  } */
+  
+  .powered-by {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #777;
+  }
+  
+  @media (max-width: 600px) {
+    .login-box {
+      padding: 1rem;
+    }
+  }
+  .button-group button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-group button img {
+    display: block;
+    width: 200px;
+    height: 60px;
+}
+
+.button-group .button-text {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Change this to whatever color you want the text to be */
+    font-size: 14px; /* Adjust the size as needed */
+    pointer-events: none; /* Ensure the text doesn't interfere with button clicks */
+}
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.m{
+  text-align: left;
+}
+
+.U{
+  text-align: left;
+}
