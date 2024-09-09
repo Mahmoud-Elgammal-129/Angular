@@ -12,7 +12,7 @@
 
   <!-- Task List Content -->
   <div class="task-list">
-    <p class="fw-bold text-muted ms-4">Complete the tasks, gain points and get rewards</p>
+    <p class="fw-bold text-muted m-auto">Complete the tasks, gain points and get rewards</p>
     <div class="task-item" *ngFor="let task of tasks; trackBy: trackByTaskId" (click)="selectTask(task)">
       <div class="task-card card">
         <div class="card-header d-flex align-items-center px-4 py-3 w-2 justify-content-center align-items-center m-auto">
@@ -31,8 +31,7 @@
           </div>
 
           <div class="task-text">
-            <p class="fw-bold" [innerHTML]="task.BX_Questions_Title_EN"></p>
-            <p *ngIf="task.BX_Questions_Text_EN">
+            <p class="fw-bold" [innerHTML]="task.BX_Questions_Title_EN?.trim() ? task.BX_Questions_Title_EN : 'Fallback text if only spaces or no value'"></p>            <p *ngIf="task.BX_Questions_Text_EN">
               {{ task.BX_Questions_Text_EN.length > 50 ? (task.BX_Questions_Text_EN | slice:0:50) + '...' : task.BX_Questions_Text_EN }}
             </p>
             <p *ngIf="!task.BX_Questions_Text_EN">

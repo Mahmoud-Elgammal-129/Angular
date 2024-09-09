@@ -8,17 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderLogoComponent } from '../header-logo/header-logo.component';
 import { HeaderMainComponent } from '../header-main/header-main.component';
 import { FooterComponent } from '../footer/footer.component';
+import { NotificationComponent } from '../notification/notification.component';
 
 @Component({
   selector: 'app-mission',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule,HeaderLogoComponent,HeaderMainComponent,FooterComponent],
+  imports: [CommonModule, NotificationComponent,FormsModule, HttpClientModule,HeaderLogoComponent,HeaderMainComponent,FooterComponent],
   templateUrl: './mission.component.html',
   styleUrls: ['./mission.component.css'],
   providers: [ApiService]
 })
 export class MissionComponent implements OnInit {
   points: number = 0;
+  notificationVisible = false;
+
   missions: Array<any> = []; // Variable to store missions
 
   constructor(private router: Router, private apiService: ApiService, private userService: UserService) {}
@@ -59,17 +62,20 @@ if(userId==null){
     this.router.navigate(['/profile']);
   }
 
-  navigateToNotifications() {
-    this.router.navigate(['/Notification']);
-  }
+
 
   navigateToActivityTitle() {
     this.router.navigate(['/activity/title']);
   }
 
-  notificationVisible = false;
+
+  
+  navigateToNotifications() {
+    this.router.navigate(['/Notification']);
+  }
+
   showNotifications(): void {
-    this.notificationVisible = !this.notificationVisible; // Toggle visibility
+    this.notificationVisible = !this.notificationVisible;
   }
 
   onCloseNotification(): void {
